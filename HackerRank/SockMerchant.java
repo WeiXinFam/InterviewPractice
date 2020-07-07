@@ -11,9 +11,6 @@ class SockMerchant {
 
     static int sockMerchant(int n, int[] ar) {
 
-        //Sort the array
-        Arrays.sort(ar);
-
         //Create Dictionary to store
         Dictionary<Integer,Integer> dict = new Hashtable<Integer, Integer>();
 
@@ -26,7 +23,7 @@ class SockMerchant {
                 dict.put(i,a);
             }
         }
-        System.out.println("New Dictionary is: " + dict); 
+        // System.out.println("New Dictionary is: " + dict); 
 
         int p=0;
 
@@ -34,13 +31,13 @@ class SockMerchant {
         for (Enumeration i = dict.elements(); i.hasMoreElements();){
             int v = (int) i.nextElement();
             int c = v/2;
-            System.out.println("C is "+c);
+            // System.out.println("C is "+c);
             p=p+c;
         }
 
-        System.out.println("Pairs: " + p); 
+        // System.out.println("Pairs: " + p); 
     
 
-        return n;
+        return p;
     }
 }
